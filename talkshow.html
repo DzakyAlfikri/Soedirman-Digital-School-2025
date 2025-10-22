@@ -3,15 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cooming Soon</title>
+    <title>Talkshow & Awarding - SDS 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/js/app.js" defer></script>
+    <style>
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        
+        
+        .twinkle {
+            animation: twinkle 2s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.1); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); }
+            50% { box-shadow: 0 0 30px rgba(255, 215, 0, 1); }
+        }
+        
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .glow-animation {
+            animation: glow 2s ease-in-out infinite;
+        }
+        
+        .award-shine {
+            background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700);
+            background-size: 200% 200%;
+            animation: shine 3s ease-in-out infinite;
+        }
+        
+        @keyframes shine {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .event-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .sparkle {
+            animation: sparkle 2s linear infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+    </style>
 </head>
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden font-inter">
     <!-- Navbar -->
     <nav class="w-full fixed top-0 z-[200] pt-6 transition-all duration-300" id="main-navbar">
         <div class="max-w-[1650px] mx-auto px-4">
@@ -22,12 +78,13 @@
                 <a href="index.html">
                     <img src="/logonavbar.png" alt="Soedirman Digital School Logo" class="h-12 md:h-16 w-auto max-w-[280px] md:max-w-[400px] object-contain transition-all duration-300" />
                 </a>
-            </div>                <!-- Navigation Menu - Desktop -->
+            </div>                
+            <!-- Navigation Menu - Desktop -->
                 <div class="hidden lg:flex items-center space-x-8 xl:space-x-12">
                     <a href="comingsoon.html" class="text-white font-bold text-sm hover:text-yellow-200 transition-all duration-300 tracking-wide uppercase cursor-pointer py-2 px-3 rounded-lg hover:bg-white/10">BEST STUDENTS</a>
                     <a href="comingsoon.html" class="text-white font-bold text-sm hover:text-yellow-200 transition-all duration-300 tracking-wide uppercase cursor-pointer py-2 px-3 rounded-lg hover:bg-white/10">AFTER MOVIE</a>
                     <a href="talkshow.html" class="text-white font-bold text-sm hover:text-yellow-200 transition-all duration-300 tracking-wide uppercase cursor-pointer py-2 px-3 rounded-lg hover:bg-white/10">AWARDING</a>
-                    <a href="index.html" class="text-white font-bold text-sm hover:text-yellow-200 transition-all duration-300 tracking-wide uppercase cursor-pointer py-2 px-3 rounded-lg hover:bg-white/10">PARTNERS</a>
+                    <a href="#partners" class="text-white font-bold text-sm hover:text-yellow-200 transition-all duration-300 tracking-wide uppercase cursor-pointer py-2 px-3 rounded-lg hover:bg-white/10">PARTNERS</a>
                 </div>
 
                 <!-- Right Section -->
@@ -59,7 +116,7 @@
                     <a href="comingsoon.html" class="text-white font-bold text-sm transition-all duration-300 uppercase w-full text-center py-3.5 rounded-md border border-white/40 hover:border-white hover:bg-white/10">BEST STUDENTS</a>
                     <a href="comingsoon.html" class="text-white font-bold text-sm transition-all duration-300 uppercase w-full text-center py-3.5 rounded-md border border-white/40 hover:border-white hover:bg-white/10">AFTER MOVIE</a>
                     <a href="talkshow.html" class="text-white font-bold text-sm hover:text-yellow-200 transition-all duration-300 tracking-wide uppercase cursor-pointer py-2 px-3 rounded-lg hover:bg-white/10">AWARDING</a>
-                    <a href="index.html" class="text-white font-bold text-sm transition-all duration-300 uppercase w-full text-center py-3.5 rounded-md border border-white/40 hover:border-white hover:bg-white/10">PARTNERS</a>
+                    <a href="#partners" class="text-white font-bold text-sm transition-all duration-300 uppercase w-full text-center py-3.5 rounded-md border border-white/40 hover:border-white hover:bg-white/10">PARTNERS</a>
                     <a href="https://drive.google.com/file/d/1My613A8qGHPbyWnZgAX0SPeH2dmLDbi7/view?usp=sharing" class="text-white font-bold text-sm transition-all duration-300 uppercase w-full text-center py-3.5 rounded-md border border-white/40 hover:border-white hover:bg-white/10">GUIDE BOOK</a>
                     <a href="#daftar" class="cta-button w-full text-white text-center bg-white text-[#FF49C0] font-bold text-sm py-3.5 rounded-full hover:bg-yellow-100 transition-colors duration-300 shadow-lg tracking-wider uppercase cursor-pointer mt-5 border-2 border-white/30">
                         SIGN IN INTO BOOTCAMP
@@ -69,76 +126,175 @@
         </div>
     </nav>
 
-    
-    <!-- Coming Soon Section -->
-    <section id="coming-soon" class="font-inter relative overflow-hidden flex items-center justify-center" style="min-height: 100vh; margin-top: -2px;">
-        <!-- Background gradient -->
-        <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#8E2DE2] via-[#4A00E0] to-[#3E00FF]"></div>
+    <!-- Main Content -->
+    <div class="relative pt-40 pb-24 px-4 font-inter min-h-screen">
+        <!-- Background Gradient -->
+        <div class="absolute inset-0 -z-10 bg-gradient-to-t from-[#FFD700] via-[#FF8C00] to-[#FF6347]"></div>
         
         <!-- Circuit Pattern Background -->
-        <div class="absolute inset-0 -z-5 opacity-30">
-            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30 z-0">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
                 <defs>
-                    <pattern id="circuit-pattern-comingsoon" width="500" height="500" patternUnits="userSpaceOnUse">
-                        <!-- Base grid -->
-                        <path d="M20,20 H480 M20,100 H480 M20,180 H480 M20,260 H480 M20,340 H480 M20,420 H480" 
-                              stroke="#B794F4" stroke-width="1" opacity="0.4" />
-                        <path d="M20,20 V480 M100,20 V480 M180,20 V480 M260,20 V480 M340,20 V480 M420,20 V480" 
-                              stroke="#B794F4" stroke-width="1" opacity="0.4" />
+                    <pattern id="circuit-pattern" patternUnits="userSpaceOnUse" width="100" height="100" patternTransform="scale(2) rotate(0)">
+                        <!-- Horizontal lines -->
+                        <path d="M0,20 H100 M0,40 H100 M0,60 H100 M0,80 H100" stroke="#FFFFFF" stroke-width="0.5" opacity="0.7" />
                         
-                        <!-- Circuit pathways -->
-                        <path d="M20,20 H260 M340,20 H480" stroke="#D6BCFA" stroke-width="2.5" opacity="0.7" />
-                        <path d="M20,100 H100 M180,100 H340 M420,100 H480" stroke="#D6BCFA" stroke-width="2.5" opacity="0.7" />
-                        <path d="M20,180 H180 M260,180 H480" stroke="#D6BCFA" stroke-width="2.5" opacity="0.7" />
-                        <path d="M20,260 H340 M420,260 H480" stroke="#D6BCFA" stroke-width="2.5" opacity="0.7" />
+                        <!-- Vertical lines -->
+                        <path d="M20,0 V100 M40,0 V100 M60,0 V100 M80,0 V100" stroke="#FFFFFF" stroke-width="0.5" opacity="0.7" />
                         
-                        <!-- Connection nodes with animation -->
-                        <circle cx="100" cy="100" r="5" fill="#D6BCFA">
-                            <animate attributeName="r" values="5;7;5" dur="3s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3s" repeatCount="indefinite" />
-                        </circle>
-                        <circle cx="260" cy="180" r="5" fill="#D6BCFA">
-                            <animate attributeName="r" values="5;7;5" dur="3s" begin="0.5s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3s" begin="0.5s" repeatCount="indefinite" />
-                        </circle>
-                        <circle cx="340" cy="260" r="5" fill="#D6BCFA">
-                            <animate attributeName="r" values="5;7;5" dur="3s" begin="1s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3s" begin="1s" repeatCount="indefinite" />
-                        </circle>
-                        <circle cx="420" cy="100" r="5" fill="#D6BCFA">
-                            <animate attributeName="r" values="5;7;5" dur="3s" begin="1.5s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3s" begin="1.5s" repeatCount="indefinite" />
-                        </circle>
+                        <!-- Connection nodes -->
+                        <circle cx="20" cy="20" r="2" fill="#FFFFFF" opacity="0.9" />
+                        <circle cx="40" cy="40" r="2" fill="#FFFFFF" opacity="0.9" />
+                        <circle cx="60" cy="60" r="2" fill="#FFFFFF" opacity="0.9" />
+                        <circle cx="80" cy="80" r="2" fill="#FFFFFF" opacity="0.9" />
                     </pattern>
                 </defs>
-                <rect x="0" y="0" width="100%" height="100%" fill="url(#circuit-pattern-comingsoon)" />
+                <rect x="0" y="0" width="100%" height="100%" fill="url(#circuit-pattern)" />
             </svg>
         </div>
         
-        <!-- Floating shapes -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none -z-5">
-            <div class="shape absolute w-72 h-72 rounded-full bg-white/10 top-20 right-20 animate-pulse" style="animation-duration: 18s;"></div>
-            <div class="shape absolute w-48 h-48 rounded-full bg-white/10 bottom-40 left-20 animate-pulse" style="animation-duration: 22s; animation-delay: 3s;"></div>
-            <div class="shape absolute w-60 h-60 rounded-full bg-white/10 top-1/3 left-40 animate-pulse" style="animation-duration: 20s; animation-delay: 1s;"></div>
+        <!-- Decorative Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <!-- Sparkles -->
+            <div class="absolute top-20 left-10 text-yellow-300 text-4xl sparkle" style="animation-delay: 0s;">✨</div>
+            <div class="absolute top-40 right-20 text-yellow-300 text-3xl sparkle" style="animation-delay: 0.5s;">⭐</div>
+            <div class="absolute bottom-40 left-[20%] text-yellow-300 text-5xl sparkle" style="animation-delay: 1s;">🏆</div>
+            <div class="absolute bottom-20 right-[15%] text-yellow-300 text-2xl sparkle" style="animation-delay: 1.5s;">🎉</div>
+            <div class="absolute top-1/3 left-1/3 text-yellow-300 text-3xl sparkle" style="animation-delay: 2s;">💫</div>
         </div>
-        
-        <!-- Coming Soon Content -->
-        <div class="relative z-10 container mx-auto px-4 py-16 flex flex-col items-center justify-center">
-            <h2 class="text-7xl md:text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-white mb-8 text-center animate-pulse" style="animation-duration: 4s; text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);">COMING SOON</h2>
-            
-            <div class="w-32 h-1 bg-gradient-to-r from-transparent via-yellow-300 to-transparent mx-auto mb-6"></div>
-            
-            <p class="text-white/80 text-xl md:text-2xl max-w-3xl text-center font-medium">
-                Stay tuned for more exciting features and programs!
-            </p>
-            
-            <!-- Decorative stars -->
-            <div class="absolute top-10 left-10 text-yellow-300 text-4xl twinkle" style="animation-delay: 0s;">★</div>
-            <div class="absolute bottom-20 right-16 text-purple-300 text-5xl twinkle" style="animation-delay: 1s;">★</div>
-            <div class="absolute top-1/4 right-20 text-blue-300 text-3xl twinkle" style="animation-delay: 0.5s;">★</div>
-            <div class="absolute bottom-1/4 left-20 text-pink-300 text-4xl twinkle" style="animation-delay: 1.5s;">★</div>
+
+        <!-- Event Header -->
+        <div class="relative z-20 flex flex-col items-center space-y-8 md:space-y-12 px-4 pt-8 md:px-8">
+            <!-- Main Title Container -->
+            <div class="event-card rounded-3xl px-8 py-6 w-full max-w-6xl text-center shadow-2xl">
+                <div class="flex items-center justify-center mb-4">
+                    <span class="text-6xl mr-4">🎓</span>
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-wide">TALKSHOW & AWARDING</h1>
+                    <span class="text-6xl ml-4">✨</span>
+                </div>
+                <div class="award-shine text-2xl md:text-3xl font-bold text-white py-2 px-6 rounded-full inline-block">
+                    SOEDIRMAN DIGITAL SCHOOL 2025
+                </div>
+            </div>
+
+            <!-- Welcome Message -->
+            <div class="event-card rounded-2xl px-6 py-8 w-full max-w-6xl shadow-2xl">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-white mb-4">Halo, <span class="text-yellow-300">Digipeeps!</span> 🌟</h2>
+                    <p class="text-white text-lg leading-relaxed mb-6">
+                        Enggak kerasa banget ya, perjalanan kita di Soedirman Digital School sudah sampai di penghujung acara! Tapi tenang, karena kita bakal menutup perjalanan ini dengan acara yang super spesial dan penuh inspirasi! 🚀
+                    </p>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                        <p class="text-white/90 text-base">
+                            Yuk, jangan sampai ketinggalan acara Talkshow & Awarding SDS 2025 yang akan membawa inspirasi dan pengalaman tak terlupakan!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Details -->
+            <div id="event-details" class="event-card rounded-2xl px-6 py-8 w-full max-w-6xl shadow-2xl">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-white mb-4">Detail Acara</h2>
+                    <div class="w-full h-[2px] bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Date -->
+                    <div class="bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-6 text-center float-animation">
+                        <div class="text-4xl mb-3">📅</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Tanggal</h3>
+                        <p class="text-white/90 text-lg font-semibold">Sabtu, 1 November 2025</p>
+                    </div>
+                    
+                    <!-- Time -->
+                    <div class="bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-6 text-center float-animation" style="animation-delay: 0.2s;">
+                        <div class="text-4xl mb-3">🕗</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Waktu</h3>
+                        <p class="text-white/90 text-lg font-semibold">08.00 – 12.00 WIB</p>
+                    </div>
+                    
+                    <!-- Location -->
+                    <div class="bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-6 text-center float-animation" style="animation-delay: 0.4s;">
+                        <div class="text-4xl mb-3">📍</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Tempat</h3>
+                        <p class="text-white/90 text-lg font-semibold">F5 Ballroom Integrated Academic Building (IAB)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Highlights -->
+            <div class="event-card rounded-2xl px-6 py-8 w-full max-w-6xl shadow-2xl">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-white mb-4">Acara yang Menanti</h2>
+                    <div class="w-full h-[2px] bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Special Performance -->
+                    <div class="bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="text-4xl mr-4">🎤</div>
+                            <h3 class="text-xl font-bold text-white">Special Performance</h3>
+                        </div>
+                        <p class="text-white/90 leading-relaxed">
+                            Dimeriahkan oleh <span class="font-bold text-yellow-300">Kak Aisyah</span> yang pastinya bikin suasana makin hangat dan berkesan! 💃
+                        </p>
+                    </div>
+                    
+                    <!-- Inspirational Talkshow -->
+                    <div class="bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="text-4xl mr-4">💬</div>
+                            <h3 class="text-xl font-bold text-white">Talkshow Inspiratif</h3>
+                        </div>
+                        <p class="text-white/90 leading-relaxed">
+                            Bareng narasumber keren dan penuh insight yang siap berbagi pengalaman seru dan motivatif buat kita semua! 🔥
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Registration Section -->
+            <div id="registration" class="event-card rounded-2xl px-6 py-8 w-full max-w-6xl shadow-2xl">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-white mb-4">Registrasi Sekarang!</h2>
+                    <div class="w-full h-[2px] bg-gradient-to-r from-transparent via-white/50 to-transparent mb-6"></div>
+                    <p class="text-white/90 text-lg">
+                        Pastikan kamu hadir dan ikut merayakan momen berharga ini bareng seluruh keluarga besar Soedirman Digital School 2025! 🥳
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Students Registration -->
+                    <div class="bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-6 text-center glow-animation">
+                        <div class="text-5xl mb-4">👨‍🎓</div>
+                        <h3 class="text-xl font-bold text-white mb-4">Untuk Peserta SDS 2025</h3>
+                        <p class="text-white/80 mb-6">Khusus untuk peserta yang telah mengikuti program SDS 2025</p>
+                        <a href="https://bit.ly/StudentsRegistrationSDS2025" target="_blank" class="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                            Daftar Sebagai Peserta SDS
+                        </a>
+                    </div>
+                    
+                    <!-- General Registration -->
+                    <div class="bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 p-6 text-center glow-animation" style="animation-delay: 0.5s;">
+                        <div class="text-5xl mb-4">🌟</div>
+                        <h3 class="text-xl font-bold text-white mb-4">Untuk Umum</h3>
+                        <p class="text-white/80 mb-6">Terbuka untuk siapa saja yang ingin mengikuti acara inspiratif</p>
+                        <a href="https://bit.ly/GeneralRegistrationSDS2025" target="_blank" class="inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                            Daftar Untuk Umum
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <p class="text-white/90 text-lg font-medium">
+                        Yuk, siapkan outfit terbaikmu dan jangan sampai ketinggalan yaa~ 💫
+                    </p>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 
     <!-- Footer Section -->
     <footer class="relative bg-gradient-to-b from-[#001B38] via-[#00254D] to-[#003366] text-white pt-12 pb-6 px-4 md:px-8 border-t-4 border-[#0085FF]/70 shadow-[0_-5px_15px_rgba(0,133,255,0.3)]">
@@ -218,7 +374,7 @@
                                 <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                             </svg>
                         </a></li>
-                        <li><a href="index.html" class="hover:text-[#0085FF] transition-colors flex items-center justify-center md:justify-end">
+                        <li><a href="#partners" class="hover:text-[#0085FF] transition-colors flex items-center justify-center md:justify-end">
                             <span>Partners</span>
                             <svg class="w-3.5 h-3.5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
@@ -314,95 +470,5 @@
             </div>
         </div>
     </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="fixed bottom-24 right-6 z-50 bg-gradient-to-r from-orange-500 to-red-500 text-white w-12 h-12 rounded-full shadow-md flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:shadow-lg transform hover:scale-110 hover:-translate-y-1" aria-label="Back to top">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
-    </button>
-
-    <!-- Floating Bubble Chat Button -->
-    <div class="fixed bottom-6 right-6 z-50 floating-chat-button">
-        <button class="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#FF49C0] to-[#691350] rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group" onclick="toggleChatInfo()" aria-label="Contact SDS">
-            <!-- Chat Bubble Icon -->
-            <div class="relative">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-                <!-- Animated Pulse Effect -->
-                <span class="absolute -top-1 -right-1 flex h-3 w-3">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-3 w-3 bg-yellow-500"></span>
-                </span>
-            </div>
-        </button>
-
-        <!-- Hidden Chat Info Panel -->
-        <div id="chatInfo" class="absolute bottom-20 right-0 bg-white rounded-lg shadow-xl p-4 w-64 transform scale-0 opacity-0 origin-bottom-right transition-all duration-300">
-            <div class="relative">
-                <!-- Close Button -->
-                <button onclick="toggleChatInfo()" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center hover:bg-red-600 transition-colors">
-                    ×
-                </button>
-                
-                <!-- Logo and Title -->
-                <div class="flex items-center gap-2 mb-3 border-b border-gray-200 pb-2">
-                    <img src="SDS 2025.png" alt="SDS Logo" class="w-8 h-8 object-contain">
-                    <h3 class="text-[#691350] font-bold text-sm">SDS Contact Center</h3>
-                </div>
-                
-                <!-- Contact Options -->
-                <div class="space-y-2">
-                    <a href="https://wa.me/6287724340809" target="_blank" class="flex items-center gap-2 text-green-600 hover:bg-green-50 p-2 rounded-md transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-                        </svg>
-                        <span class="text-sm">WhatsApp Admin</span>
-                    </a>
-                    <a href="mailto:soedigitalschool@gmail.com" class="flex items-center gap-2 text-blue-600 hover:bg-blue-50 p-2 rounded-md transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        <span class="text-sm">Email Us</span>
-                    </a>
-                    <a href="https://www.instagram.com/soedirman.digital.school/" class="flex items-center gap-2 text-pink-600 hover:bg-pink-50 p-2 rounded-md transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
-                        <span class="text-sm">Instagram</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Registration Modal -->
-    <div id="registrationModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-        <div class="flex items-center justify-center h-full">
-            <div class="relative bg-white rounded-lg p-8 max-w-md w-full mx-4 modal-container" style="position: relative; overflow: hidden;">
-            <div class="sparkles"></div>
-            <!-- Close Button -->
-            <button id="closeModal" class="absolute top-4 right-4 text-3xl font-bold text-gray-800 hover:text-black">×</button>
-            
-            <!-- Modal Content -->
-            <div class="text-center">
-                <h2 class="text-2xl font-bold mb-8 text-transparent bg-clip-text" style="font-family: 'Poppins', sans-serif; background-image: linear-gradient(to right, #D4A017, #FFC125, #D4A017); text-shadow: 0 2px 4px rgba(0,0,0,0.1);">Pilih Jenis Pendaftaran</h2>
-                
-                <div class="flex flex-col md:flex-row gap-6 justify-center">
-                    <!-- Umum Button -->
-                    <a href="https://forms.gle/7Z66JqvNTusKNjFd9" class="registration-option flex items-center justify-center py-2 px-6 rounded-full transition-all duration-300" style="min-width: 130px; background: linear-gradient(to bottom, #FFBD33, #FFA500); border: 2px solid #E09400; color: #000; font-family: 'Poppins', sans-serif; font-weight: 600; box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3), 0 0 5px rgba(255, 165, 0, 0.5); animation: button-glow 3s ease-in-out infinite;">
-                        Umum <span class="ml-2 text-xl font-normal">+</span>
-                    </a>
-                    
-                    <!-- Gensoed Button -->
-                    <a href="https://forms.gle/7Z66JqvNTusKNjFd9" class="registration-option flex items-center justify-center py-2 px-6 rounded-full transition-all duration-300" style="min-width: 130px; background: linear-gradient(to bottom, #FFBD33, #FFA500); border: 2px solid #E09400; color: #000; font-family: 'Poppins', sans-serif; font-weight: 600; box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3), 0 0 5px rgba(255, 165, 0, 0.5); animation: button-glow 3s ease-in-out infinite; animation-delay: 0.5s;">
-                        Gensoed <span class="ml-2 text-xl font-normal">+</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
 </body>
 </html>
